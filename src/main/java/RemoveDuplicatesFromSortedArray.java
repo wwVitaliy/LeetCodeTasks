@@ -59,18 +59,14 @@ class RemoveDuplicatesFromSortedArray {
     public int removeDuplicates(int[] nums) {
         if (nums.length <= 1) return nums.length;
 
-        int tempNumber = nums[0];
         int pointer = 0;
 
         for (int i = 1; i < nums.length; i++) {
-            if (nums[i] > tempNumber && pointer < i) {
+            if (nums[i] > nums[pointer] && pointer < i) {
                 pointer++;
                 nums[pointer] = nums[i];
-                tempNumber = nums[i];
             }
         }
-        return pointer + 1;
+        return ++pointer;
     }
-
-
 }
