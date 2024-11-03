@@ -33,7 +33,8 @@ class RotateString {
 
         int i = 0;
         while (i < s.length()) {
-            int n = s.indexOf(firstLetter);
+            int n = newS.indexOf(String.valueOf(firstLetter));
+            if (n < 0 ) return false;
             for (int j = 0; j < n; j++) {
                 newS
                         .append(newS.charAt(0))
@@ -56,8 +57,9 @@ class RotateString {
 
     public static void main(String[] args) {
         RotateString myClass = new RotateString();
-        System.out.println(myClass.rotateString("abcde", "cdeab"));
-        System.out.println(myClass.rotateString("abcde", "abced"));
-        System.out.println(myClass.rotateString("ohbrwzxvxe", "uornhegseo"));
+//        System.out.println(myClass.rotateString("abcde", "cdeab"));
+//        System.out.println(myClass.rotateString("abcde", "abced"));
+//        System.out.println(myClass.rotateString("ohbrwzxvxe", "uornhegseo"));
+        System.out.println(myClass.rotateString("bbbacddceeb", "ceebbbbacdd"));
     }
 }
