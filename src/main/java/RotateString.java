@@ -26,40 +26,40 @@ class RotateString {
     public boolean rotateString(String s, String goal) {
         if (s.length() != goal.length()) return false;
         if (s.equals(goal)) return true;
-
-        char firstLetter = goal.charAt(0);
-        StringBuilder newS = new StringBuilder(s);
-        StringBuilder newGoal = new StringBuilder(goal);
-
-        int i = 0;
-        while (i < s.length()) {
-            int n = newS.indexOf(String.valueOf(firstLetter));
-            if (n < 0 ) return false;
-            for (int j = 0; j < n; j++) {
-                newS
-                        .append(newS.charAt(0))
-                        .deleteCharAt(0);
-            }
-            if (newS.compareTo(newGoal) == 0) return true;
-            if (n == 0) {
-                newS
-                        .append(newS.charAt(0))
-                        .deleteCharAt(0);
-                i++;
-            } else {
-                i += n;
-            }
-        }
-
-
-        return false;
+////    Solution #1
+//        char firstLetter = goal.charAt(0);
+//        StringBuilder newS = new StringBuilder(s);
+//        StringBuilder newGoal = new StringBuilder(goal);
+//
+//        int i = 0;
+//        while (i < s.length()) {
+//            int n = newS.indexOf(String.valueOf(firstLetter));
+//            if (n < 0 ) return false;
+//            for (int j = 0; j < n; j++) {
+//                newS
+//                        .append(newS.charAt(0))
+//                        .deleteCharAt(0);
+//            }
+//            if (newS.compareTo(newGoal) == 0) return true;
+//            if (n == 0) {
+//                newS
+//                        .append(newS.charAt(0))
+//                        .deleteCharAt(0);
+//                i++;
+//            } else {
+//                i += n;
+//            }
+//        }
+//        return false;
+////         Solution #2
+        return (s+s).contains(goal);
     }
 
     public static void main(String[] args) {
         RotateString myClass = new RotateString();
-//        System.out.println(myClass.rotateString("abcde", "cdeab"));
-//        System.out.println(myClass.rotateString("abcde", "abced"));
-//        System.out.println(myClass.rotateString("ohbrwzxvxe", "uornhegseo"));
+        System.out.println(myClass.rotateString("abcde", "cdeab"));
+        System.out.println(myClass.rotateString("abcde", "abced"));
+        System.out.println(myClass.rotateString("ohbrwzxvxe", "uornhegseo"));
         System.out.println(myClass.rotateString("bbbacddceeb", "ceebbbbacdd"));
     }
 }
