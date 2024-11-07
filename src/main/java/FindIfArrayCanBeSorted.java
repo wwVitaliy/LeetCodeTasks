@@ -123,6 +123,4 @@ class FindIfArrayCanBeSorted {
         System.out.println(myClass.canSortArray(new int[]{24, 12}));
         System.out.println(myClass.canSortArray(new int[]{8, 148, 182, 62, 255}));
     }
-
-
 }
