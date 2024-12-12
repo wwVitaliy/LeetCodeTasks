@@ -41,6 +41,10 @@ public class SubstringOfSizeThreeWithDistinctChars {
             }
         }
         return goodStringsCount;
+
+
+
+        
     }
 
     public static void main(String[] args) {
