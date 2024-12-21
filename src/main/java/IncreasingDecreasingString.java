@@ -1,4 +1,3 @@
-import java.util.ArrayList;
 import java.util.Arrays;
 
 /**
@@ -41,47 +40,47 @@ public class IncreasingDecreasingString {
         }
 
         char[] chars = s.toCharArray();
-        boolean[] isTacken = new boolean[s.length()];
         Arrays.sort(chars);
+        boolean[] isTaken = new boolean[s.length()];
 
         StringBuilder result = new StringBuilder();
 
         while (result.length() != chars.length) {
 
-            // add largest char
+            // step1 - add smallest char
             for (int i = 0; i < chars.length; i++) {
-                if (!isTacken[i]) {
+                if (!isTaken[i]) {
                     result.append(chars[i]);
-                    isTacken[i] = true;
+                    isTaken[i] = true;
                     break;
                 }
             }
 
-            // step 1-2-3
+            // step 2-3
             for (int i = 0; i < chars.length; i++) {
-                if (!isTacken[i]) {
+                if (!isTaken[i]) {
                     if (chars[i] > result.charAt(result.length() - 1)) {
                         result.append(chars[i]);
-                        isTacken[i] = true;
+                        isTaken[i] = true;
                     }
                 }
             }
 
-            // add largest char
+            // step 4 - add largest char
             for (int i = chars.length - 1; i >= 0; i--) {
-                if (!isTacken[i]) {
+                if (!isTaken[i]) {
                     result.append(chars[i]);
-                    isTacken[i] = true;
+                    isTaken[i] = true;
                     break;
                 }
             }
 
-            // step 4-5-6
+            // step 5-6
             for (int i = chars.length - 1; i >= 0; i--) {
-                if (!isTacken[i]) {
+                if (!isTaken[i]) {
                     if (chars[i] < result.charAt(result.length() - 1)) {
                         result.append(chars[i]);
-                        isTacken[i] = true;
+                        isTaken[i] = true;
                     }
                 }
             }
