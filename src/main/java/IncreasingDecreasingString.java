@@ -96,6 +96,9 @@ public class IncreasingDecreasingString {
         System.out.println(myCLass.sortString("aaaabbbbcccc").equals("abccbaabccba"));
         System.out.println(myCLass.sortString("rat"));
         System.out.println(myCLass.sortString("rat").equals("art"));
+
+
+        
     }
 
 }
