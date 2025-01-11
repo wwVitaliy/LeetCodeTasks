@@ -33,26 +33,49 @@ import java.util.List;
  */
 
 public class ValidParentheses {
+//    public boolean isValid(String s) {
+//        if (s.length() % 2 == 1) {
+//            return false;
+//        }
+//
+//        int startLength;
+//        int endLength = s.length();
+//
+//        do {
+//            startLength = endLength;
+//
+//            s = s.replace("{}", "");
+//            s = s.replace("()", "");
+//            s = s.replace("[]", "");
+//
+//            endLength = s.length();
+//
+//        } while (startLength != endLength);
+//
+//        return s.isEmpty();
+//    }
+
     public boolean isValid(String s) {
         if (s.length() % 2 == 1) {
             return false;
         }
 
-        int startLength;
-        int endLength = s.length();
+        char[] chars = s.toCharArray();
+        List<Character> stack = new ArrayList<>();
 
-        do {
-            startLength = endLength;
+        for (char ch : chars) {
+            if (ch == '(') {
+                stack.add(')');
+            } else if (ch == '{') {
+                stack.add('}');
+            } else if (ch == '[') {
+                stack.add(']');
+            } else if (stack.isEmpty() || stack.removeLast() != ch) {
+                return false;
+            }
+        }
 
-            s = s.replace("{}", "");
-            s = s.replace("()", "");
-            s = s.replace("[]", "");
-
-            endLength = s.length();
-
-        } while (startLength != endLength);
-
-        return s.isEmpty();
+        return stack.isEmpty();
     }
 
     public static void main(String[] args) {
