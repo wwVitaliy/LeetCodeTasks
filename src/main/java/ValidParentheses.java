@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * 20. Valid Parentheses
  * Given a string s containing just the characters '(', ')', '{', '}', '[' and ']',
@@ -31,7 +34,25 @@
 
 public class ValidParentheses {
     public boolean isValid(String s) {
-        return false;
+        if (s.length() % 2 == 1) {
+            return false;
+        }
+
+        int startLength;
+        int endLength = s.length();
+
+        do {
+            startLength = endLength;
+
+            s = s.replace("{}", "");
+            s = s.replace("()", "");
+            s = s.replace("[]", "");
+
+            endLength = s.length();
+
+        } while (startLength != endLength);
+
+        return s.isEmpty();
     }
 
     public static void main(String[] args) {
