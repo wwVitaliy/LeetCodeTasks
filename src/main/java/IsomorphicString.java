@@ -1,3 +1,9 @@
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Objects;
+import java.util.stream.Collectors;
+
 /**
  * 205. Isomorphic Strings
  * Given two strings s and t, determine if they are isomorphic.
@@ -30,14 +36,35 @@
  */
 public class IsomorphicString {
     public boolean isIsomorphic(String s, String t) {
-        return false;
+        if (s.length() != t.length()) {
+            return false;
+        }
+
+        Map<Character, Character> charsMap = new HashMap<>();
+
+        for (int i = 0; i < s.length(); i++) {
+
+            char charS = s.charAt(i);
+            char charT = t.charAt(i);
+
+            if (!charsMap.containsKey(charS)
+                    && !charsMap.containsValue(charT)) {
+                charsMap.put(charS, charT);
+            } else if ((charsMap.containsKey(charS) && !charsMap.get(charS).equals(charT))
+                    || (!charsMap.containsKey(charS) && charsMap.containsValue(charT))
+            ) {
+                return false;
+            }
+        }
+        return true;
     }
 
     public static void main(String[] args) {
         IsomorphicString myClass = new IsomorphicString();
 
-        System.out.println(myClass.isIsomorphic("egg","add"));
-        System.out.println(myClass.isIsomorphic("foo","bar"));
-        System.out.println(myClass.isIsomorphic("paper","title"));
+        System.out.println(myClass.isIsomorphic("egg", "add"));
+        System.out.println(myClass.isIsomorphic("foo", "bar"));
+        System.out.println(myClass.isIsomorphic("paper", "title"));
+        System.out.println(myClass.isIsomorphic("bbbaaaba", "aaabbbba"));
     }
 }
