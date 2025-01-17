@@ -33,7 +33,45 @@
  */
 public class MaximumScoreAfterSplittingString {
     public int maxScore(String s) {
-        return -1;
+        if (!s.contains("0") || !s.contains("1")) {
+            return s.length() - 1;
+        }
+
+        char[] chars = s.toCharArray();
+
+        int[] scoreHistogram = new int[chars.length];
+
+        int zeros = 0;
+        for (int i = 1; i < chars.length-1; i++) {
+            if (chars[i] == '0'){
+                zeros++;
+            }
+            scoreHistogram[i] = zeros;
+        }
+
+        int ones = 0;
+        for (int i = chars.length - 2; i >= 1; i--) {
+            if (chars[i] == '1'){
+                ones++;
+            }
+            scoreHistogram[i] += ones;
+        }
+
+        int maxScore = scoreHistogram[0];
+        for (int i : scoreHistogram) {
+            if (i > maxScore){
+                maxScore = i;
+            }
+        }
+
+        if (chars[0] == '0'){
+            maxScore++;
+        }
+        if (chars[chars.length - 1] == '1'){
+            maxScore++;
+        }
+
+        return maxScore;
     }
 
     public static void main(String[] args) {
@@ -42,5 +80,6 @@ public class MaximumScoreAfterSplittingString {
         System.out.println(myClass.maxScore("011101"));
         System.out.println(myClass.maxScore("00111"));
         System.out.println(myClass.maxScore("1111"));
+        System.out.println(myClass.maxScore("11100"));
     }
 }
