@@ -1,3 +1,6 @@
+import java.util.HashSet;
+import java.util.Set;
+
 /**
  * 3174. Clear Digits
  * You are given a string s.
@@ -25,7 +28,30 @@
  */
 public class ClearDigits {
     public String clearDigits(String s) {
-        return null;
+        char[] chars = s.toCharArray();
+        Set<Integer> indexesToRemove = new HashSet<>();
+
+        for (int i = 0; i < chars.length; i++) {
+            if (Character.isDigit(chars[i])) {
+                indexesToRemove.add(i);
+                for (int j = i - 1; ; j--) {
+                    if (!indexesToRemove.contains(j)) {
+                        indexesToRemove.add(j);
+                        break;
+                    }
+                }
+            }
+        }
+
+        StringBuilder result = new StringBuilder();
+
+        for (int i = 0; i < chars.length; i++) {
+            if (!indexesToRemove.contains(i)) {
+                result.append(chars[i]);
+            }
+        }
+
+        return result.toString();
     }
 
     public static void main(String[] args) {
