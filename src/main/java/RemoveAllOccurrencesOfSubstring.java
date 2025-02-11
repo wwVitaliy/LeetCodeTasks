@@ -34,8 +34,16 @@
  */
 public class RemoveAllOccurrencesOfSubstring {
     public String removeOccurrences(String s, String part) {
-        return null;
+        StringBuilder stringBuilder = new StringBuilder(s);
+
+        while(stringBuilder.indexOf(part) != -1){
+            stringBuilder
+                    = stringBuilder.delete(stringBuilder.indexOf(part), stringBuilder.indexOf(part) + part.length());
+        }
+
+        return stringBuilder.toString();
     }
+
 
     public static void main(String[] args) {
         RemoveAllOccurrencesOfSubstring myClass = new RemoveAllOccurrencesOfSubstring();
