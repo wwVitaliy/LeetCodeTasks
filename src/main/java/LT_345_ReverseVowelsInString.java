@@ -20,7 +20,7 @@
  * s consist of printable ASCII characters.
  */
 
-public class ReverseVowelsInString {
+public class LT_345_ReverseVowelsInString {
     public String reverseVowels(String s) {
 
         String vowels = "AOUEIaouei";
@@ -58,7 +58,7 @@ public class ReverseVowelsInString {
 
 
     public static void main(String[] args) {
-        ReverseVowelsInString myClass = new ReverseVowelsInString();
+        LT_345_ReverseVowelsInString myClass = new LT_345_ReverseVowelsInString();
 
         System.out.println(myClass.reverseVowels("IceCreAm"));
         System.out.println(myClass.reverseVowels("leetcode"));

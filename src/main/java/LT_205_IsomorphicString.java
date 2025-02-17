@@ -1,8 +1,5 @@
-import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Objects;
-import java.util.stream.Collectors;
 
 /**
  * 205. Isomorphic Strings
@@ -34,7 +31,7 @@ import java.util.stream.Collectors;
  * t.length == s.length
  * s and t consist of any valid ascii character.
  */
-public class IsomorphicString {
+public class LT_205_IsomorphicString {
     public boolean isIsomorphic(String s, String t) {
         if (s.length() != t.length()) {
             return false;
@@ -60,7 +57,7 @@ public class IsomorphicString {
     }
 
     public static void main(String[] args) {
-        IsomorphicString myClass = new IsomorphicString();
+        LT_205_IsomorphicString myClass = new LT_205_IsomorphicString();
 
         System.out.println(myClass.isIsomorphic("egg", "add"));
         System.out.println(myClass.isIsomorphic("foo", "bar"));

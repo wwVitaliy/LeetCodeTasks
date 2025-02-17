@@ -32,7 +32,7 @@
  * 1 <= part.length <= 1000
  * s and part consists of lowercase English letters.
  */
-public class RemoveAllOccurrencesOfSubstring {
+public class LT_1910_RemoveAllOccurrencesOfSubstring {
     public String removeOccurrences(String s, String part) {
         StringBuilder stringBuilder = new StringBuilder(s);
 
@@ -46,7 +46,7 @@ public class RemoveAllOccurrencesOfSubstring {
 
 
     public static void main(String[] args) {
-        RemoveAllOccurrencesOfSubstring myClass = new RemoveAllOccurrencesOfSubstring();
+        LT_1910_RemoveAllOccurrencesOfSubstring myClass = new LT_1910_RemoveAllOccurrencesOfSubstring();
 
         System.out.println(myClass.removeOccurrences("daabcbaabcbc", "abc"));
         System.out.println(myClass.removeOccurrences("axxxxyyyyb", "xy"));

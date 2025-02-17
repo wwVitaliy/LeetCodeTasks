@@ -17,7 +17,7 @@
  * 1 <= s.length <= 105
  * s[i] is a printable ascii character.
  */
-public class ReverseString {
+public class LT_344_ReverseString {
     public void reverseString(char[] s) {
         char temp;
         int pointer = s.length - 1;

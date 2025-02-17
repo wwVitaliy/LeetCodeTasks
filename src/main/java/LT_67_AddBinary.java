@@ -1,5 +1,3 @@
-import java.util.Arrays;
-
 /**
  * 67. Add Binary
  * Given two binary strings a and b, return their sum as a binary string.
@@ -17,7 +15,7 @@ import java.util.Arrays;
  * a and b consist only of '0' or '1' characters.
  * Each string does not contain leading zeros except for the zero itself.
  */
-public class AddBinary {
+public class LT_67_AddBinary {
     public String addBinary(String a, String b) {
 
         int i = a.length() - 1;
@@ -43,7 +41,7 @@ public class AddBinary {
     }
 
     public static void main(String[] args) {
-        AddBinary myClass = new AddBinary();
+        LT_67_AddBinary myClass = new LT_67_AddBinary();
 
         System.out.println(myClass.addBinary("11", "1"));
         System.out.println(myClass.addBinary("1010", "011"));

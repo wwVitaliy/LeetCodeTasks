@@ -41,7 +41,7 @@
  * start and target consist of the characters 'L', 'R', and '_'.
  */
 
-public class MovingPiecesToObtainString {
+public class LT_2337_MovingPiecesToObtainString {
     public boolean canChange(String start, String target) {
         if (target.isBlank()) {
             return true;
@@ -87,7 +87,7 @@ public class MovingPiecesToObtainString {
     }
 
     public static void main(String[] args) {
-        MovingPiecesToObtainString myClass = new MovingPiecesToObtainString();
+        LT_2337_MovingPiecesToObtainString myClass = new LT_2337_MovingPiecesToObtainString();
 //        System.out.println(myClass.canChange("_L__R__R_", "L______RR"));
         System.out.println(myClass.canChange("__R_R_R_L", "____RRR_L"));
 //        System.out.println(myClass.canChange("R_L_", "__LR"));

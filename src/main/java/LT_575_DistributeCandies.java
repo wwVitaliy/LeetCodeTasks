@@ -31,13 +31,13 @@
  * n is even.
  * -105 <= candyType[i] <= 105
  */
-public class DistributeCandies {
+public class LT_575_DistributeCandies {
     public int distributeCandies(int[] candyType) {
     return -1;
     }
 
     public static void main(String[] args) {
-        DistributeCandies myClass = new DistributeCandies();
+        LT_575_DistributeCandies myClass = new LT_575_DistributeCandies();
 
         System.out.println(myClass.distributeCandies(new int[]{1, 1, 2, 2, 3, 3}));
         System.out.println(myClass.distributeCandies(new int[]{1, 1, 2, 3}));

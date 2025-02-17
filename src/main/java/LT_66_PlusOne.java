@@ -36,7 +36,7 @@ import java.util.Arrays;
  * digits does not contain any leading 0's.
  */
 
-public class PlusOne {
+public class LT_66_PlusOne {
     public int[] plusOne(int[] digits) {
 
         for (int i = digits.length - 1; i >= 0; i--) {
@@ -60,7 +60,7 @@ public class PlusOne {
 
 
     public static void main(String[] args) {
-        PlusOne myClass = new PlusOne();
+        LT_66_PlusOne myClass = new LT_66_PlusOne();
 
         System.out.println(Arrays.toString(myClass.plusOne(new int[]{1, 2, 3})));
         System.out.println(Arrays.toString(myClass.plusOne(new int[]{4, 3, 2, 1})));

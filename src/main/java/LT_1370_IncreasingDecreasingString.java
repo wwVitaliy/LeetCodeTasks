@@ -33,7 +33,7 @@ import java.util.Arrays;
  * 1 <= s.length <= 500
  * s consists of only lowercase English letters.
  */
-public class IncreasingDecreasingString {
+public class LT_1370_IncreasingDecreasingString {
     public String sortString(String s) {
         if (s.isBlank()) {
             return s;
@@ -90,7 +90,7 @@ public class IncreasingDecreasingString {
     }
 
     public static void main(String[] args) {
-        IncreasingDecreasingString myCLass = new IncreasingDecreasingString();
+        LT_1370_IncreasingDecreasingString myCLass = new LT_1370_IncreasingDecreasingString();
 
         System.out.println(myCLass.sortString("aaaabbbbcccc"));
         System.out.println(myCLass.sortString("aaaabbbbcccc").equals("abccbaabccba"));

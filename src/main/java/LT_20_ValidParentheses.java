@@ -32,7 +32,7 @@ import java.util.List;
  * s consists of parentheses only '()[]{}'.
  */
 
-public class ValidParentheses {
+public class LT_20_ValidParentheses {
 //    public boolean isValid(String s) {
 //        if (s.length() % 2 == 1) {
 //            return false;
@@ -79,7 +79,7 @@ public class ValidParentheses {
     }
 
     public static void main(String[] args) {
-        ValidParentheses myClass = new ValidParentheses();
+        LT_20_ValidParentheses myClass = new LT_20_ValidParentheses();
 
         System.out.println(myClass.isValid("()"));
         System.out.println(myClass.isValid("()[]{}"));

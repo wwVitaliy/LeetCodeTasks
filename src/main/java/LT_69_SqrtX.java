@@ -23,7 +23,7 @@
  */
 
 
-public class SqrtX {
+public class LT_69_SqrtX {
     public int mySqrt(int x) {
         int i = 1;
         while (x / i >= i) {
@@ -33,7 +33,7 @@ public class SqrtX {
     }
 
     public static void main(String[] args) {
-        SqrtX myClass = new SqrtX();
+        LT_69_SqrtX myClass = new LT_69_SqrtX();
 
         System.out.println(myClass.mySqrt(4));
         System.out.println(myClass.mySqrt(8));

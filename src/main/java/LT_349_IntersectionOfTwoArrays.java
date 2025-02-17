@@ -23,7 +23,7 @@ import java.util.Set;
  * 1 <= nums1.length, nums2.length <= 1000
  * 0 <= nums1[i], nums2[i] <= 1000
  */
-public class IntersectionOfTwoArrays {
+public class LT_349_IntersectionOfTwoArrays {
     public int[] intersection(int[] nums1, int[] nums2) {
 
         Set<Integer> unicNums1 = new HashSet<>();
@@ -58,7 +58,7 @@ public class IntersectionOfTwoArrays {
     }
 
     public static void main(String[] args) {
-        IntersectionOfTwoArrays myClass = new IntersectionOfTwoArrays();
+        LT_349_IntersectionOfTwoArrays myClass = new LT_349_IntersectionOfTwoArrays();
 
         System.out.println(Arrays.toString(myClass.intersection(new int[]{1, 2, 2, 1}, new int[]{2, 2})));
         System.out.println(Arrays.toString(myClass.intersection(new int[]{4, 9, 5}, new int[]{9, 4, 9, 8, 4})));

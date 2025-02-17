@@ -1,5 +1,3 @@
-import java.util.Arrays;
-
 /**
  * 2275. Largest Combination With Bitwise AND Greater Than Zero
  * The bitwise AND of an array nums is the bitwise AND of all integers in nums.
@@ -35,7 +33,7 @@ import java.util.Arrays;
  * 1 <= candidates[i] <= 107
  */
 
-class Leetcode2275 {
+class LT_2275 {
     public int largestCombination(int[] candidates) {
         int[] bitsSum = new int[31];
 
@@ -58,7 +56,7 @@ class Leetcode2275 {
     }
 
     public static void main(String[] args) {
-        Leetcode2275 myClass = new Leetcode2275();
+        LT_2275 myClass = new LT_2275();
         System.out.println(myClass.largestCombination(new int[]{16, 17, 71, 62, 12, 24, 14}));
         System.out.println(myClass.largestCombination(new int[]{8, 8}));
     }

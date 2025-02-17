@@ -28,7 +28,7 @@ import java.util.Set;
  * 1 <= starti <= endi <= 100
  */
 
-public class PointThatIntersectsWithCars {
+public class LT_2848_PointThatIntersectsWithCars {
     public int numberOfPoints(List<List<Integer>> nums) {
         Set<Integer> integers = new HashSet<>();
 
@@ -42,7 +42,7 @@ public class PointThatIntersectsWithCars {
     }
 
     public static void main(String[] args) {
-        PointThatIntersectsWithCars myClass = new PointThatIntersectsWithCars();
+        LT_2848_PointThatIntersectsWithCars myClass = new LT_2848_PointThatIntersectsWithCars();
 
         System.out.println(myClass.numberOfPoints(List.of(List.of(3, 6), List.of(1, 5), List.of(4, 7))));
         System.out.println(myClass.numberOfPoints(List.of(List.of(1, 3), List.of(5, 8))));

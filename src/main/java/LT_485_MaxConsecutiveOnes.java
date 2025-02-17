@@ -20,7 +20,7 @@
  * nums[i] is either 0 or 1.
  */
 
-public class MaxConsecutiveOnes {
+public class LT_485_MaxConsecutiveOnes {
     public int findMaxConsecutiveOnes(int[] nums) {
         int count = 0;
         int maxSequence = 0;
@@ -38,7 +38,7 @@ public class MaxConsecutiveOnes {
     }
 
     public static void main(String[] args) {
-        MaxConsecutiveOnes myClass = new MaxConsecutiveOnes();
+        LT_485_MaxConsecutiveOnes myClass = new LT_485_MaxConsecutiveOnes();
 
         System.out.println(myClass.findMaxConsecutiveOnes(new int[]{1, 1, 0, 1, 1, 1}));
         System.out.println(myClass.findMaxConsecutiveOnes(new int[]{1,0,1,1,0,1}));

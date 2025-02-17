@@ -1,9 +1,3 @@
-import java.util.HashSet;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Set;
-import java.util.stream.Collectors;
-
 /**
  * 3174. Clear Digits
  * You are given a string s.
@@ -29,7 +23,7 @@ import java.util.stream.Collectors;
  * s consists only of lowercase English letters and digits.
  * The input is generated such that it is possible to delete all digits.
  */
-public class ClearDigits {
+public class LT_3174_ClearDigits {
 
     // Variant 1
 //    public String clearDigits(String s) {
@@ -103,7 +97,7 @@ public class ClearDigits {
     }
 
     public static void main(String[] args) {
-        ClearDigits myClass = new ClearDigits();
+        LT_3174_ClearDigits myClass = new LT_3174_ClearDigits();
 
         System.out.println(myClass.clearDigits("abc"));
         System.out.println(myClass.clearDigits("cb34"));

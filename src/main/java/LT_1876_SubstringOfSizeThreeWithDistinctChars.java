@@ -24,7 +24,7 @@
  * s consists of lowercase English letters.
  */
 
-public class SubstringOfSizeThreeWithDistinctChars {
+public class LT_1876_SubstringOfSizeThreeWithDistinctChars {
     public int countGoodSubstrings(String s) {
         if (s.length() < 3) {
             return 0;
@@ -44,7 +44,7 @@ public class SubstringOfSizeThreeWithDistinctChars {
     }
 
     public static void main(String[] args) {
-        SubstringOfSizeThreeWithDistinctChars myClass = new SubstringOfSizeThreeWithDistinctChars();
+        LT_1876_SubstringOfSizeThreeWithDistinctChars myClass = new LT_1876_SubstringOfSizeThreeWithDistinctChars();
 
         System.out.println(myClass.countGoodSubstrings("xyzzaz"));
         System.out.println(myClass.countGoodSubstrings("aababcabc"));

@@ -31,7 +31,7 @@
  * 2 <= s.length <= 500
  * The string s consists of characters '0' and '1' only.
  */
-public class MaximumScoreAfterSplittingString {
+public class LT_1422_MaximumScoreAfterSplittingString {
     public int maxScore(String s) {
         if (!s.contains("0") || !s.contains("1")) {
             return s.length() - 1;
@@ -75,7 +75,7 @@ public class MaximumScoreAfterSplittingString {
     }
 
     public static void main(String[] args) {
-        MaximumScoreAfterSplittingString myClass = new MaximumScoreAfterSplittingString();
+        LT_1422_MaximumScoreAfterSplittingString myClass = new LT_1422_MaximumScoreAfterSplittingString();
 
         System.out.println(myClass.maxScore("011101"));
         System.out.println(myClass.maxScore("00111"));
