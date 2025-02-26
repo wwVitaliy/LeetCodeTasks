@@ -27,7 +27,24 @@
  */
 public class LT_125_ValidPalindrome {
     public boolean isPalindrome(String s) {
-        return false;
+        StringBuilder stringBuilder = new StringBuilder();
+        s = s.toLowerCase();
+        for (int i = 0; i < s.length(); i++) {
+            if (Character.isAlphabetic(s.charAt(i)) || Character.isDigit(s.charAt(i))) {
+                stringBuilder.append(s.charAt(i));
+            }
+        }
+
+        return isStringBuilderPalindrome(stringBuilder);
+    }
+
+    private boolean isStringBuilderPalindrome(StringBuilder sb) {
+        for (int i = 0; i < sb.length() / 2; i++) {
+            if (sb.charAt(i) != sb.charAt(sb.length() - 1 - i)) {
+                return false;
+            }
+        }
+        return true;
     }
 
     public static void main(String[] args) {
