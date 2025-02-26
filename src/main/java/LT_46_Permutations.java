@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -25,6 +26,20 @@ import java.util.List;
  */
 public class LT_46_Permutations {
     public List<List<Integer>> permute(int[] nums) {
+        if (nums.length == 0) {
+            return List.of();
+        }
+
+        if (nums.length == 1) {
+            return List.of(List.of(nums[0]));
+        }
+
+        List<List<Integer>> permutations = new ArrayList<>();
+
+        for (int i = 0; i < nums.length; i++) {
+        }
+
+
         return null;
     }
 
