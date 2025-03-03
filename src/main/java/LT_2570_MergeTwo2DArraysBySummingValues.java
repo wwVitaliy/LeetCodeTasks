@@ -1,4 +1,7 @@
 import java.util.Arrays;
+import java.util.HashMap;
+import java.util.List;
+import java.util.stream.Collectors;
 
 /**
  * 2570. Merge Two 2D Arrays by Summing Values
@@ -36,14 +39,49 @@ import java.util.Arrays;
  */
 public class LT_2570_MergeTwo2DArraysBySummingValues {
     public int[][] mergeArrays(int[][] nums1, int[][] nums2) {
-        return null;
+        if (nums1.length == 0) {
+            return nums2;
+        }
+        if (nums2.length == 0) {
+            return nums1;
+        }
+
+        HashMap<Integer, Integer> result = new HashMap<>();
+        addToMap(nums1, result);
+        addToMap(nums2, result);
+
+        int[][] ints = new int[result.size()][2];
+
+        List<Integer> sortedKeys = result.keySet().stream().sorted().toList();
+
+        for (int i = 0; i < sortedKeys.size(); i++) {
+            ints[i][0] = sortedKeys.get(i);
+            ints[i][1] = result.get(sortedKeys.get(i));
+        }
+        return ints;
+    }
+
+    private static void addToMap(int[][] array, HashMap<Integer, Integer> result) {
+        for (int i = 0; i < array.length; i++) {
+            if (result.containsKey(array[i][0])){
+                result.replace(array[i][0], result.get(array[i][0]) + array[i][1]);
+            }else{
+                result.put(array[i][0], array[i][1]);
+            }
+        }
     }
 
     public static void main(String[] args) {
         LT_2570_MergeTwo2DArraysBySummingValues myClass = new LT_2570_MergeTwo2DArraysBySummingValues();
 
-        System.out.println(Arrays.toString(myClass.mergeArrays(new int[][]{{1, 2}, {2, 3}, {4, 5}}, new int[][]{{1, 4}, {3, 2}, {4, 1}})));
-        System.out.println(Arrays.toString(myClass.mergeArrays(new int[][]{{2, 4}, {3, 6}, {5, 5}}, new int[][]{{1, 3}, {4, 3}})));
+        int[][] ints1 = myClass.mergeArrays(new int[][]{{1, 2}, {2, 3}, {4, 5}}, new int[][]{{1, 4}, {3, 2}, {4, 1}});
+        for (int[] ints : ints1) {
+            System.out.println(Arrays.toString(ints));
+        }
 
+        int[][] ints2 = myClass.mergeArrays(new int[][]{{2, 4}, {3, 6}, {5, 5}}, new int[][]{{1, 3}, {4, 3}});
+        for (int[] ints : ints2) {
+            System.out.println(Arrays.toString(ints));
+        }
     }
 }
