@@ -83,5 +83,8 @@ public class LT_2570_MergeTwo2DArraysBySummingValues {
         for (int[] ints : ints2) {
             System.out.println(Arrays.toString(ints));
         }
+
+
+
     }
 }
