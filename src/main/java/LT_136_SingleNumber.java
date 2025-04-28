@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 /**
  * 136. Single Number
  * Given a non-empty array of integers nums, every element appears twice except for one. Find that single one.
@@ -23,7 +25,15 @@
 
 public class LT_136_SingleNumber {
     public int singleNumber(int[] nums) {
-        return -1;
+        ArrayList<Integer> integers = new ArrayList<>();
+        for (int num : nums) {
+            if (integers.contains(num)){
+                integers.remove(Integer.valueOf(num));
+            }else{
+                integers.add(num);
+            }
+        }
+        return integers.getFirst();
     }
 
     public static void main(String[] args) {
