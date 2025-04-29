@@ -23,7 +23,22 @@
  */
 public class LT_121_BestTimeToBuyAndSellStock {
     public int maxProfit(int[] prices) {
-        return  -1;
+        if (prices.length == 1) {return 0;};
+
+        int buyPrice = prices[0];
+        int profit = 0;
+
+        for (int i = 1; i < prices.length ; i++) {
+            if (prices[i] < buyPrice){
+                buyPrice = prices[i];
+            }else{
+                if (prices[i] - buyPrice > profit){
+                    profit = prices[i] - buyPrice;
+                }
+            }
+        }
+
+        return  profit;
     }
 
     public static void main(String[] args) {
